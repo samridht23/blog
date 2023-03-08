@@ -1,0 +1,13 @@
+<div class="author">
+  <img
+    class="author-avatar"
+    src="{{ .Site.Params.author.avatar | absURL }}"
+    alt="{{ .Site.Params.author.name }}"
+    width="100px"
+    height="100px"
+  />
+  <h2 class="author-name">{{ .Site.Params.author.intro }}</h2>
+  <a class="author-bio" href="https://twitter.com/svmridh"
+    >{{ .Site.Params.author.description }}</a
+  >
+</div>

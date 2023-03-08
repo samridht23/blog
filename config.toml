@@ -2,7 +2,7 @@ rssLimit = 20
 baseURL = 'https://samridht23.github.io/blog/'
 languageCode = 'en-us'
 title = 'Samridh Blog'
-theme= 'hugo-blog-awesome'
+theme= 'mytheme'
 canonifyURLs = true
 
 [markup]
