@@ -1,5 +1,38 @@
+rssLimit = 20
 baseURL = 'https://samridht23.github.io/blog/'
 languageCode = 'en-us'
-title = ''
-theme= 'mini-max'
+title = 'Samridh Blog'
+theme= 'hugo-blog-awesome'
 canonifyURLs = true
+
+[markup]
+	[markup.highlight]
+		noClasses = false
+
+[menu]
+	[[menu.main]]
+		pageRef="/"
+		name="Home"
+		url="/"
+		weight="10"
+	[[menu.main]]
+		pageRef="posts"
+		name="Posts"
+		url="/posts/"
+		weight=20
+	[[menu.main]]
+		pageRef="about"
+		name="About"
+		url="/about/"
+		weight=30
+
+[params]
+	sitename = "Samridh blog"
+  	defaultColor = "dark"
+	description = "I write stuff about stuff here."
+
+[params.author]
+	avatar = "img/avatar.png"
+	intro = "Samridh Blog"
+	name="Samridh"
+	description="@svmridh"

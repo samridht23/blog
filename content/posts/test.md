@@ -1,9 +1,7 @@
 ---
-title: "Ford Life and Work"
-date: 2023-01-05T02:49:48+05:30
-draft: false
-summary: Summary of Book My Life and Work
-tags: [book, summary, ford]
+title: "Test"
+date: 2023-03-08T15:09:50+05:30
+draft: false 
 ---
 
 hi
