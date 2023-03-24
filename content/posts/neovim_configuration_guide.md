@@ -1,4 +1,3 @@
----
 +++
 author = "Samridh"
 title = "Neovim Configuration"
@@ -11,9 +10,8 @@ tags = [
 "configuration",
 "text editor",
 ]
-draft = true
+draft = false
 +++
----
 
 This blog is about configuring **Neovim** for Development. And also I expect you to have some basic knowledge of Lua because we are going to use Lua for configuring Neovim.
 
@@ -70,3 +68,7 @@ We will use **Packer** to manage plugins for neovim.
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
+
+### Starting Point
+
+`init.lua` is a Lua script file that is used as a configuration file for Neovim
