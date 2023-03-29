@@ -13,7 +13,7 @@ tags = [
 draft = false
 +++
 
-This blog is about configuring **Neovim** for Development. And also I expect you to have some basic knowledge of Lua because we are going to use Lua for configuring Neovim.
+This blog is about configuring **Neovim** for Development. And also I expect you to have some basic knowledge of Lua because we are going to use Lua for configuring Neovim. We are using lua because it allow for more powerfull and flexible configuration options than traditional init.vim which uses vimscript for configuring your editor.
 
 ---
 
@@ -71,4 +71,25 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 ### Starting Point
 
-`init.lua` is a Lua script file that is used as a configuration file for Neovim
+`init.lua` is a Lua script file that is used as a configuration file for Neovim and also it is the staring point of our configuration.
+
+Our **nvim** file structure
+
+├── app
+│ ├── css
+│ │ ├── **/\*.css
+│ ├── favicon.ico
+│ ├── images
+│ ├── index.html
+│ ├── js
+│ │ ├── **/\*.js
+│ └── partials/template
+├── dist (or build)
+├── node_modules
+├── bower_components (if using bower)
+├── test
+├── Gruntfile.js/gulpfile.js
+├── README.md
+├── package.json
+├── bower.json (if using bower)
+└── .gitignore.
