@@ -73,20 +73,21 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 `init.lua` is a Lua script file that is used as a configuration file for Neovim and also it is the staring point of our configuration.
 
-Our **neovim** config file structure
+Our **neovim** configuration file structure
 
 ```
 |-- lua
 |   |--core
         |--init.lua
 |   |--plugins
+        |--init.lua
 |-- .gitignore
 |-- init.lua
 ```
 
 Lua offers a high-level function to load and run libraries called `require` and when you run require('core'), Lua look for file name "core.lua" in the current directory or in any of the directories specified in the package.path variable. If it finds the file, it loads and executes it. If "core.lua" is not found, Lua looks for a directory named "core" instead. If it finds the directory, it looks for an "init.lua" file inside that directory and loads and executes it.
 
-First we will config main settings provide by neovim api
+First we will configure main settings provide by neovim api
 
 > lua/core/init.lua
 
@@ -104,6 +105,11 @@ local g = vim.g
 -- Leader Key Map
 -- set the leader key to 'space key'
 g.mapleader = " "
+
+-- disabling netrw for nvim-tree
+g.load_netrw = 1
+g.loaded_netrwPlugin = 1
+
 
 -- vim/neovim will wait for 400 milliseconds
 -- for a complete key code sequence to be received
@@ -145,9 +151,6 @@ o.cindent = true
 -- To adjust the indentation of an existing line you
 -- can use command `Ctrl + >` or `Ctrl + <'
 o.autoindent = true
-
--- wrap the lines that are longer than the width of the window
-o.warp = true
 
 -- effectively disables automatic text wrapping
 -- o.textwidth = 0
@@ -208,3 +211,22 @@ o.mouse = "a"
 o.termguicolors = true
 
 ```
+
+Now we will create plugin folder inside lua folder for our plugin configurations.We are also going to use **Packer** plugin manager.
+
+To install Packer plugin manager
+
+> Unix,Linux installation
+
+```bash
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
+> Windows Powershell Installation
+
+```bash
+git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
+```
+
+> lua/plugins/init.lua
