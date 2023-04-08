@@ -15,6 +15,8 @@ draft = false
 
 This blog is about configuring **Neovim** for Development. And also I expect you to have some basic knowledge of Lua because we are going to use Lua for configuring Neovim. We are using lua because it allow for more powerfull and flexible configuration options than traditional init.vim which uses vimscript for configuring your editor.
 
+My Neovim configuration repo -> https://github.com/samridht23/nvim
+
 ---
 
 ## Installing Neovim
